@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)https://www.freecodecamp.org/news/number-systems-in-java/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        
+            <title>How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained</title>
+        
+        <meta name="HandheldFriendly" content="True">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com/">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+        
+            <link rel="stylesheet" as="style" onload="this.onload=null;this.rel=&#39;stylesheet&#39;" href="./How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained_files/css2">
+        
+
+        
+        
+    <link rel="stylesheet" as="style" onload="this.onload=null;this.rel=&#39;stylesheet&#39;" href="./How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained_files/prism.min.css">
+<noscript>
+  <link
+    rel="stylesheet"
+    href="https://cdn.freecodecamp.org/news-assets/prism/1.29.0/themes/prism.min.css"
+  />
+</noscript>
+<link rel="stylesheet" as="style" onload="this.onload=null;this.rel=&#39;stylesheet&#39;" href="./How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained_files/prism-unescaped-markup.min.css">
+<noscript>
+  <link
+    rel="stylesheet"
+    href="https://cdn.freecodecamp.org/news-assets/prism/1.29.0/plugins/unescaped-markup/prism-unescaped-markup.min.css"
+  />
+</noscript>
+
+<script src="./How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained_files/f(4).txt"></script><script type="text/javascript" async="" src="./How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained_files/js"></script><script type="text/javascript" async="" src="./How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained_files/analytics.js"></script><script src="./How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained_files/f(5).txt" id="google_shimpl"></script><script async="" src="./How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained_files/gtm.js"></script><script defer="" src="./How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained_files/prism-core.min.js"></script>
+<script defer="" src="./How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained_files/prism-autoloader.min.js"></script>
+
+
+
+        
+        <link rel="stylesheet" as="style" onload="this.onload=null;this.rel=&#39;stylesheet&#39;" href="./How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained_files/global-26e2f3cde9.css">
+        <link rel="stylesheet" type="text/css" href="./How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained_files/screen-5a4f9d5c91.css">
+        <link rel="stylesheet" type="text/css" href="./How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained_files/search-bar-124f5f949c.css">
+
+        
+        <script defer="" src="./How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained_files/algoliasearch.min.js"></script>
+        <script defer="" src="./How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained_files/autocomplete.min.js"></script>
+
+        
+        <script defer="" src="./How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained_files/dayjs.min.js"></script>
+        <script defer="" src="./How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained_files/localizedFormat.min.js"></script>
+        <script defer="" src="./How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained_files/relativeTime.min.js"></script>
+
+        
+        
+            <script defer="" src="./How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained_files/en.min.js"></script>
+        
+
+        
+        <script>let client,index;document.addEventListener("DOMContentLoaded",(()=>{client=algoliasearch("QMJYL5WYTI","89770b24481654192d7a5c402c6ad9a0"),index=client.initIndex("news")})),document.addEventListener("DOMContentLoaded",(()=>{const e=window.screen.width,t=window.screen.height,n=e>=767&&t>=768?8:5,o=document.getElementById("search-form"),s=document.getElementById("search-input"),a=document.getElementById("dropdown-container");let i,d,c;s.addEventListener("input",(e=>{i=e.target.value})),o.addEventListener("submit",(e=>{e.preventDefault(),function(){if(d=document.getElementsByClassName("aa-cursor")[0],d&&i){const e=d.querySelector("a").href;window.location.assign(e)}else!d&&i&&c&&window.location.assign(`https://www.freecodecamp.org/news/search?query=${i}`)}()}));const l=autocomplete("#search-input",{hint:!1,keyboardShortcuts:["s",191],openOnFocus:!0,appendTo:a,debug:!0},[{source:autocomplete.sources.hits(index,{hitsPerPage:n}),debounce:250,templates:{suggestion:e=>(c=!0,`\n            <a href="${e.url}">\n              <div class="algolia-result">\n                <span>${e._highlightResult.title.value}</span>\n              </div>\n            </a>\n          `),empty:()=>(c=!1,'\n            <div class="aa-suggestion footer-suggestion no-hits-footer">\n              <div class="algolia-result">\n                <span>\n                  No tutorials found\n                </span>\n              </div>\n            </div>\n          '),footer:e=>{if(!e.isEmpty)return`\n              <div class="aa-suggestion footer-suggestion">\n                <a id="algolia-footer-selector" href="https://www.freecodecamp.org/news/search?query=${i}">\n                  <div class="algolia-result algolia-footer">\n                    See all results for ${i}\n                  </div>\n                </a>\n              </div>\n            `}}}]).on("autocomplete:selected",((e,t,n,o)=>{d=t?t.url:`https://www.freecodecamp.org/news/search?query=${i}`,"click"!==o.selectionMethod&&"tabKey"!==o.selectionMethod&&c&&window.location.assign(d)}));document.addEventListener("click",(e=>{e.target!==s&&l.autocomplete.close()}))})),document.addEventListener("DOMContentLoaded",(()=>{dayjs.extend(dayjs_plugin_localizedFormat),dayjs.extend(dayjs_plugin_relativeTime),dayjs.locale("en")}));const isAuthenticated=document.cookie.split(";").some((e=>e.trim().startsWith("jwt_access_token="))),isDonor=document.cookie.split(";").some((e=>e.trim().startsWith("isDonor=true")));</script>
+
+        
+        
+    
+        <script data-ad-client="ca-pub-9482786369113753" src="./How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained_files/f(6).txt" crossorigin="anonymous" async="" data-checked-head="true"></script>
+        <script data-test-label="toggle-ad-layout" defer="" src="./How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained_files/toggle-ad-layout-099254b065.js"></script>
+    
+
+
+        
+        
+    <script defer="" src="./How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained_files/fitvids-5d12072cbf.js"></script>
+    
+    <script>document.addEventListener("DOMContentLoaded",(()=>{const t=document.querySelector(".post-full-content");t&&fitVids(t)}));</script>
+
+
+        
+        
+
+        <link rel="icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon.ico" type="image/png">
+        
+        
+            <link rel="canonical" href="https://www.freecodecamp.org/news/number-systems-in-java/">
+        
+        <meta name="referrer" content="no-referrer-when-downgrade">
+
+        
+
+        
+    <link rel="amphtml" href="https://www.freecodecamp.org/news/number-systems-in-java/amp/">
+    <meta name="description" content="Knowing how to work with numbers is essential in programming. Java supports four number systems that are used for various purposes – the decimal, binary, octal, and hexadecimal systems.  Understanding what these number systems are and when to use them is an important skill for any Java programmer. ">
+
+    
+    <meta property="og:site_name" content="freeCodeCamp.org">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained">
+    
+        <meta property="og:description" content="Knowing how to work with numbers is essential in programming. Java supports four number systems that are used for various purposes – the decimal, binary, octal, and hexadecimal systems.  Understanding what these number systems are and when to use them is an important skill for any Java programmer. ">
+    
+    <meta property="og:url" content="https://www.freecodecamp.org/news/number-systems-in-java/">
+    <meta property="og:image" content="https://www.freecodecamp.org/news/content/images/2023/05/number-systems.jpg">
+    <meta property="article:published_time" content="2023-05-11T21:54:41.000Z">
+    <meta property="article:modified_time" content="2023-05-11T21:54:41.000Z">
+    
+        <meta property="article:tag" content="Java">
+    
+    <meta property="article:publisher" content="https://www.facebook.com/freecodecamp">
+    
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained">
+    
+        <meta name="twitter:description" content="Knowing how to work with numbers is essential in programming. Java supports four number systems that are used for various purposes – the decimal, binary, octal, and hexadecimal systems.  Understanding what these number systems are and when to use them is an important skill for any Java programmer. ">
+    
+    <meta name="twitter:url" content="https://www.freecodecamp.org/news/number-systems-in-java/">
+    <meta name="twitter:image" content="https://www.freecodecamp.org/news/content/images/2023/05/number-systems.jpg">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Mikael Lassa">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Java">
+    <meta name="twitter:site" content="@freecodecamp">
+    
+
+    <meta property="og:image:width" content="2000">
+    <meta property="og:image:height" content="1333">
+
+
+        
+    <script type="application/ld+json">{
+	"@context": "https://schema.org",
+	"@type": "Article",
+	"publisher": {
+		"@type": "Organization",
+		"name": "freeCodeCamp.org",
+		"url": "https://www.freecodecamp.org/news/",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg",
+			"width": 2100,
+			"height": 240
+		}
+	},
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://www.freecodecamp.org/news/content/images/2023/05/number-systems.jpg",
+		"width": 2000,
+		"height": 1333
+	},
+	"url": "https://www.freecodecamp.org/news/number-systems-in-java/",
+	"mainEntityOfPage": {
+		"@type": "WebPage",
+		"@id": "https://www.freecodecamp.org/news/"
+	},
+	"datePublished": "2023-05-11T21:54:41.000Z",
+	"dateModified": "2023-05-11T21:54:41.000Z",
+	"keywords": "Java",
+	"description": "Knowing how to work with numbers is essential in programming. Java supports four\nnumber systems that are used for various purposes – the decimal, binary, octal,\nand hexadecimal systems. \n\nUnderstanding what these number systems are and when to use them is an important\nskill for any Java programmer. \n\nHow the Decimal Number System Works\nThe decimal number system is the most widely used number system in Java. It&#x27;s\nalso probably the easiest one to understand, as we commonly use it in everyday\nlife.",
+	"headline": "How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained",
+	"author": {
+		"@type": "Person",
+		"name": "Mikael Lassa",
+		"url": "https://www.freecodecamp.org/news/author/mikael/",
+		"sameAs": [
+			"https://medium.com/@mikael.lassa"
+		],
+		"image": {
+			"@type": "ImageObject",
+			"url": "https://www.freecodecamp.org/news/content/images/2023/03/0I7A2527-copy-2.jpeg",
+			"width": 2000,
+			"height": 2478
+		}
+	}
+}</script>
+
+
+        <meta name="generator" content="Eleventy">
+        <link rel="alternate" type="application/rss+xml" title="freeCodeCamp.org" href="https://www.freecodecamp.org/news/rss/">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com/">
+
+<!-- Web Monetization (https://webmonetization.org/) -->
+<meta name="monetization" content="$ilp.uphold.com/LJmbPn7WD4JB">
+<!-- end Web Monetization -->
+
+<!-- dataLayer setup -->
+<script>
+window.dataLayer = window.dataLayer || [];
+</script>
+<!-- End dataLayer setup -->
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5D6RKKP');</script>
+<!-- End Google Tag Manager -->
+
+
+<meta name="google-site-verification" content="b4tITLzEeeZGEpvD4mGNf3khKM4fvqejQaz9SYBQP8E">
+
+        
+    <meta http-equiv="origin-trial" content="A7CQXglZzTrThjGTBEn1rWTxHOEtkWivwzgea+NjyardrwlieSjVuyG44PkYgIPGs8Q9svD8sF3Yedn0BBBjXAkAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A3vKT9yxRPjmXN3DpIiz58f5JykcWHjUo/W7hvmtjgh9jPpQgem9VbADiNovG8NkO6mRmk70Kex8/KUqAYWVWAEAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A4A26Ymj79UVY7C7JGUS4BG1s7MdcDokAQf/RP0paks+RoTYbXHxceT/5L4iKcsleFCngi75YfNRGW2+SpVv1ggAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="As0hBNJ8h++fNYlkq8cTye2qDLyom8NddByiVytXGGD0YVE+2CEuTCpqXMDxdhOMILKoaiaYifwEvCRlJ/9GcQ8AAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="AgRYsXo24ypxC89CJanC+JgEmraCCBebKl8ZmG7Tj5oJNx0cmH0NtNRZs3NB5ubhpbX/bIt7l2zJOSyO64NGmwMAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><style id="fit-vids-style">.fluid-width-video-container{flex-grow: 1;width:100%;}.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style><style type="text/css">@font-face{
+    font-family: 'bnazanin';
+    src:'./../../fonts/bnazanin.ttf';
+}
+
+.dideo-tooltip {
+    position: relative;
+    display: inline-block;
+    font-family: 'bnazanin';
+    font-size: 0;
+    padding: 3px 5px;
+}
+
+.dideo-tooltip .tooltiptext {
+    visibility: hidden;
+    font-family: 'bnazanin';
+    width: 120px;
+    font-size: 13px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    left: 110%;
+}
+.dideo-img{
+    width: 18px;
+    height: 18px;
+    margin-bottom: -3px;
+    filter: drop-shadow(0px 0px 2px #adadad);
+    webkit:filter: drop-shadow(0px 0px 2px #adadad);
+}
+.dideo-tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+}
+.dideo-tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+.srg{
+    min-width: 750px;
+}</style><link rel="preload" href="./How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained_files/f(7).txt" as="script"><script type="text/javascript" src="./How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained_files/f(7).txt"></script></head>
+    
+    
+        <body class="home-template" data-new-gr-c-s-check-loaded="14.1110.0" data-gr-ext-installed="">
+    
+        <div class="site-wrapper" style="height: auto !important; min-height: 0px !important;">
+            <nav class="site-nav nav-padding">
+    <div class="site-nav-left">
+        
+<form id="search-form" data-test-label="search-bar">
+    <div role="search" class="searchbox__wrapper">
+        <label class="fcc_sr_only" for="search-input">
+            Search
+        </label>
+        <input type="search" placeholder="
+    Search 10,000+ tutorials
+" id="search-input" class="aa-input" autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-owns="algolia-autocomplete-listbox-0" dir="auto" style=""><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: Lato, sans-serif; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: normal; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre>
+        <button type="submit" class="ais-SearchBox-submit">
+            <svg class="ais-SearchBox-submitIcon" xmlns="https://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 40 40">
+    <path d="M26.804 29.01c-2.832 2.34-6.465 3.746-10.426 3.746C7.333 32.756 0 25.424 0 16.378 0 7.333 7.333 0 16.378 0c9.046 0 16.378 7.333 16.378 16.378 0 3.96-1.406 7.594-3.746 10.426l10.534 10.534c.607.607.61 1.59-.004 2.202-.61.61-1.597.61-2.202.004L26.804 29.01zm-10.426.627c7.323 0 13.26-5.936 13.26-13.26 0-7.32-5.937-13.257-13.26-13.257C9.056 3.12 3.12 9.056 3.12 16.378c0 7.323 5.936 13.26 13.258 13.26z"></path>
+</svg>
+
+            <span class="fcc_sr_only">Submit your search query</span>
+        </button>
+        <div id="dropdown-container"><span class="algolia-autocomplete" style="position: absolute; z-index: 100; display: none; direction: ltr;"><span class="aa-dropdown-menu" role="listbox" id="algolia-autocomplete-listbox-0" style="display: block; left: 0px; right: auto;"><div class="aa-dataset-1"></div></span></span></div>
+    </div>
+</form>
+
+    </div>
+    <div class="site-nav-middle">
+        <a class="site-nav-logo" href="https://www.freecodecamp.org/news" data-test-label="site-nav-logo" dideo-checked="true"><img src="./How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained_files/fcc_primary.svg" alt="freeCodeCamp.org"></a>
+    </div>
+    <div class="site-nav-right">
+        <div class="nav-group">
+            <a class="nav-forum" id="nav-forum" rel="noopener noreferrer" href="https://forum.freecodecamp.org/" target="_blank" data-test-label="forum-button" dideo-checked="true">Forum</a>
+            <a class="toggle-button-nav" id="nav-donate" rel="noopener noreferrer" href="https://www.freecodecamp.org/donate/" target="_blank" data-test-label="donate-button" dideo-checked="true">Donate</a>
+        </div>
+    </div>
+</nav>
+
+
+            
+            <a class="banner" id="banner" data-test-label="banner" rel="noopener noreferrer" target="_blank" href="https://www.freecodecamp.org/" text-variation="default" dideo-checked="true">
+    <p id="banner-text">Learn to code — <span>free 3,000-hour curriculum</span></p>
+</a>
+
+
+    
+    <script>document.addEventListener("DOMContentLoaded",(()=>{const e=document.getElementById("banner"),t=document.getElementById("banner-text");isAuthenticated?(t.innerHTML="Support our charity and our mission. <span>Donate to freeCodeCamp.org</span>.",e.href="https://www.freecodecamp.org/donate",e.setAttribute("text-variation","authenticated")):isDonor?(t.innerHTML="Thank you for supporting freeCodeCamp through <span>your donations</span>.",e.href="https://www.freecodecamp.org/news/how-to-donate-to-free-code-camp/",e.setAttribute("text-variation","donor")):(t.innerHTML="Learn to code — <span>free 3,000-hour curriculum</span>",e.href="https://www.freecodecamp.org/",e.setAttribute("text-variation","default"))}));</script>
+
+
+            <div id="error-message"></div>
+
+            
+    <main id="site-main" class="post-template site-main outer" style="height: auto !important;">
+        <div class="inner ad-layout" style="height: auto !important;">
+            <article class="post-full post " style="height: auto !important;">
+                <header class="post-full-header">
+                    <section class="post-full-meta">
+                        <time class="post-full-meta-date" datetime="Thu May 11 2023 21:54:41 GMT+0000 (Coordinated Universal Time)">
+                            May 11, 2023
+                        </time>
+                        
+                            <span class="date-divider">/</span>
+                            <a dir="ltr" href="https://www.freecodecamp.org/news/tag/java/" dideo-checked="true">
+                                #Java
+                            </a>
+                        
+                    </section>
+                    <h1 class="post-full-title">How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained</h1>
+                </header>
+                <div class="post-full-author-header" data-test-label="author-header-no-bio">
+                    
+                        
+                            
+    
+    
+    
+
+    <section class="author-card" data-test-label="author-card">
+        
+            
+    <img srcset="https://www.freecodecamp.org/news/content/images/size/w60/2023/03/0I7A2527-copy-2.jpeg 60w" sizes="60px" src="./How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained_files/0I7A2527-copy-2.jpeg" class="author-profile-image" alt="Mikael Lassa" width="2000" height="2478" onerror="this.style.display=&#39;none&#39;" data-test-label="profile-image">
+  
+        
+
+        <section class="author-card-content author-card-content-no-bio">
+            <span class="author-card-name">
+                <a href="https://www.freecodecamp.org/news/author/mikael/" data-test-label="profile-link" dideo-checked="true">
+                    
+                        Mikael Lassa
+                    
+                </a>
+            </span>
+            
+        </section>
+    </section>
+
+                        
+                    
+                </div>
+                
+                    <figure class="post-full-image">
+                        
+    <picture>
+      <source media="(max-width: 700px)" sizes="1px" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 1w">
+      <source media="(min-width: 701px)" sizes="(max-width: 800px) 400px, (max-width: 1170px) 700px, 1400px" srcset="https://www.freecodecamp.org/news/content/images/size/w300/2023/05/number-systems.jpg 300w,https://www.freecodecamp.org/news/content/images/size/w600/2023/05/number-systems.jpg 600w,https://www.freecodecamp.org/news/content/images/size/w1000/2023/05/number-systems.jpg 1000w,https://www.freecodecamp.org/news/content/images/size/w2000/2023/05/number-systems.jpg 2000w">
+      <img onerror="this.style.display=&#39;none&#39;" src="./How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained_files/number-systems.jpg" alt="How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained" ,="" width="2000" height="1333">
+    </picture>
+  
+                    </figure>
+                
+                <section class="post-full-content" style="height: auto !important; min-height: 0px !important;">
+                    <div class="post-and-sidebar" style="height: auto !important;">
+                        <section class="post-content ">
+                            
+<p>Knowing how to work with numbers is essential in programming. Java supports four number systems that are used for various purposes – the decimal, binary, octal, and hexadecimal systems. </p><p>Understanding what these number systems are and when to use them is an important skill for any Java programmer. </p><h2 id="how-the-decimal-number-system-works">How the Decimal Number System Works</h2><p>The decimal number system is the most widely used number system in Java. It's also probably the easiest one to understand, as we commonly use it in everyday life. It is a base-10 system that uses ten digits (0-9) to represent numbers.</p><p>In more technical terms, the Oracle Java documentation defines an integer literal as a number represented with a sequence of ASCII digits from 0 to 9. When suffixed with the ASCII character L or l, the number is of type <code>long</code>. (<a href="https://docs.oracle.com/javase/specs/jls/se12/html/jls-3.html#jls-DecimalIntegerLiteral" dideo-checked="true">Source: Oracle Java Documentation</a>)</p><p>As a refresher, <code>int</code> and <code>long</code> are two of the primitive data types in Java. An <code>int</code> is a 32-bit integer representing values ranging between -2,147,483,648 and 2,147,483,647. A <code>long</code> is a 64-bit integer that can hold substantially larger values, namely from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807. </p><p>The use cases of the decimal number system in Java are naturally numerous. It is commonly used in many applications to handle numeric values such as currencies, prices and other financial data, or different types of quantities and measurements (length, time, and so on.). It is also used for most types of arithmetic calculations, as well as for counting and indexing items in arrays or lists. </p><p>Here are some straightforward examples:</p><pre class="language-java" tabindex="0"><code class="language-java"><span class="token keyword">int</span> decimalInt <span class="token operator">=</span> <span class="token number">15</span><span class="token punctuation">;</span>
+<span class="token keyword">long</span> decimalLong <span class="token operator">=</span> <span class="token number">400L</span><span class="token punctuation">;</span>
+</code></pre><h2 id="how-the-binary-number-system-works">How the Binary Number System Works</h2><p>The binary number system is a base-2 system that uses two digits (0 and 1) to represent numbers. Computers are designed to process input in the form of binary numbers, as they can easily represent two states (for example, on/off) and can be combined to perform more complex operations. </p><p>In Java, binary numbers can be used for low-level programming tasks, where there might be a need to operate closer to the inner workings of the machine. </p><p>Binary numbers are also useful for bitwise logical operations, such as <code>AND</code>, <code>OR</code>, and <code>NOT</code>. These operations can be performed quickly and efficiently in a computer's processor using simple digital logic circuits. </p><p>To declare a binary number in Java, you can use the prefix <code>0b</code> or <code>0B</code> followed by the binary digits. For example:</p><pre class="language-java" tabindex="0"><code class="language-java"><span class="token keyword">int</span> binaryInt <span class="token operator">=</span> <span class="token number">0b1010</span><span class="token punctuation">;</span> 
+<span class="token keyword">long</span> binaryLong <span class="token operator">=</span> <span class="token number">0B1010L</span><span class="token punctuation">;</span></code></pre><h2 id="how-the-octal-number-system-works">How the Octal Number System Works</h2><p>The octal number system is a base-8 system that uses eight digits (0-7) to represent numbers. Octal numbers are perhaps not used as widely as the other systems described in this article, but they do find their distinct areas of application.</p><p>In Unix-based operating systems, for instance, file permissions are represented using octal numbers. This means that, when working with file permissions in Java, you may need to use octal numbers to set the permissions of a file.</p><p>To declare an octal number in Java, you use the digit <code>0</code> as a prefix, followed by the octal digits. For example:</p><pre class="language-java" tabindex="0"><code class="language-java"><span class="token keyword">int</span> octalInt <span class="token operator">=</span> <span class="token number">0273</span><span class="token punctuation">;</span>
+<span class="token keyword">long</span> octalLong <span class="token operator">=</span> <span class="token number">0273L</span><span class="token punctuation">;</span></code></pre><h2 id="how-the-hexadecimal-number-system-works">How the Hexadecimal Number System Works</h2><p>The hexadecimal number system is a base-16 system that uses a total of 16 characters, that is ten digits (0-9) and six letters (A-F), to represent numbers. The letters represents the numbers 10 to 15.</p><p>The advantages of using the hexadecimal system are apparent whenever you need a more terse and concise way of representing numbers – for instance when dealing with low-level programming tasks. </p><p>Computer memory addresses and color codes are indeed often represented with hexadecimal numbers, as the corresponding binary representations would be considerably harder to read for humans. </p><p>To declare a hexadecimal number in Java, you use <code>0x</code> or <code>0X</code> as a prefix, followed by the digits. For example:</p><pre class="language-java" tabindex="0"><code class="language-java"><span class="token keyword">int</span> hexInt <span class="token operator">=</span> <span class="token number">0x10e</span><span class="token punctuation">;</span> 
+<span class="token keyword">long</span> hexLong <span class="token operator">=</span> <span class="token number">0XABC1</span><span class="token punctuation">;</span></code></pre><h2 id="how-to-convert-between-number-systems">How to Convert between Number Systems</h2><p>There are several reasons why you may need to convert between different number systems. When working with low-level programming, for example, you might need to convert between decimal and binary or hexadecimal numbers to be able to set configurations. </p><p>One common way to translate different number systems into the decimal system is to multiply each digit, starting from the right, by the corresponding power of the base number, which is 2 for binary numbers, 8 for octal numbers, and so on. </p><p>For example, to convert octal numbers to the decimal system, you can calculate the product of each digit, starting from the rightmost digit, to the corresponding power of the number 8. The formula can be represented as follows, where <code>digit0</code> is the rightmost digit:</p><pre><code>(digit0 x 8^0) + (digit1 x 8^1) + (digit2 x 8^2) + ... + (digitn x 8^n) </code></pre><p>Based on this formula, the octal number <code>0273</code> converts to 187: starting from the right, the digit 3 is multiplied with 8 to the power of 0, then the digit 7 is multiplied with 8 to the power of 1, and so on.</p><pre><code>  (3 x 8^0) + (7 x 8^1) + (2 x 8^2)
+= 3 + 56 + 128
+= 187</code></pre><p>A similar concept applies to hexadecimal numbers, using the base of 16 for the calculation. For example, the hexadecimal number <code>0xABC1</code> can be converted to 43969 as follows:</p><pre><code> (1 x 16^0) + (C x 16^1) + (B x 16^2) + (A x 16^3) 
+= 1 + 192 + 2816 + 40960       
+= 43969</code></pre><p>Java provides methods to convert numbers from one number system to another. These methods are available in the <code>Integer</code> and <code>Long</code> wrapper classes.</p><p>To convert a decimal number to a string representing its binary, octal, or hexadecimal correspondent, you can use the following methods:</p><pre class="language-java" tabindex="0"><code class="language-java"><span class="token keyword">int</span> decimalNumber <span class="token operator">=</span> <span class="token number">165</span><span class="token punctuation">;</span>
+
+<span class="token class-name">String</span> binaryNumber <span class="token operator">=</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">toBinaryString</span><span class="token punctuation">(</span>decimalNumber<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//10100101</span>
+<span class="token class-name">String</span> octalNumber <span class="token operator">=</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">toOctalString</span><span class="token punctuation">(</span>decimalNumber<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//245</span>
+<span class="token class-name">String</span> hexNumber <span class="token operator">=</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">toHexString</span><span class="token punctuation">(</span>decimalNumber<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//a5</span></code></pre><p>To perform the opposite conversion, the <code>parseInt</code> method has a useful implementation that takes two arguments: the string to be parsed, and the radix, which will be 2 for binary numbers, 8 for octals, and 16 for hexadecimals.</p><pre class="language-java" tabindex="0"><code class="language-java"><span class="token class-name">String</span> binaryNumber <span class="token operator">=</span> <span class="token string">"1010"</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> decimalFromBinary <span class="token operator">=</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">parseInt</span><span class="token punctuation">(</span>binaryNumber<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token class-name">String</span> octalNumber <span class="token operator">=</span> <span class="token string">"10"</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> decimalFromOctal <span class="token operator">=</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">parseInt</span><span class="token punctuation">(</span>octalNumber<span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token class-name">String</span> hexNumber <span class="token operator">=</span> <span class="token string">"A"</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> decimalFromHex <span class="token operator">=</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">parseInt</span><span class="token punctuation">(</span>hexNumber<span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h2 id="conclusion">Conclusion</h2><p>This brief guide covered the four number systems supported in Java: decimal, binary, octal, and hexadecimal. It also described some simple ways to declare and convert numbers between different number systems. </p><p>Having an understanding of these concepts is important for any Java programmer, as it allows you to implement a more flexible and efficient manipulation and calculation of data based on the specific project requirements.</p><p>If you would like to read any of my other articles, you are welcome to check out my <a href="https://medium.com/@mikael.lassa" dideo-checked="true">blog</a>.</p>
+
+                        </section>
+                        
+                            <div class="sidebar" style="height: auto !important;">
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper" style="height: auto !important; min-height: 0px !important;">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins class="adsbygoogle" style="display: block; height: 600px;" data-ad-client="ca-pub-9482786369113753" data-ad-slot="5720086888" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done" data-ad-status="filled"><div id="aswift_1_host" style="border: none; height: 600px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0;width:300px;height:600px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="300" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained_files/ads.html" data-google-container-id="a!2" data-google-query-id="CJm-u8SRhv8CFVRgFQgdCCcKgA" data-load-complete="true"></iframe></div></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper" style="height: auto !important; min-height: 0px !important;">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins class="adsbygoogle" style="display: block; height: 600px;" data-ad-client="ca-pub-9482786369113753" data-ad-slot="5720086888" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done" data-ad-status="filled"><div id="aswift_2_host" style="border: none; height: 600px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;border:0;width:300px;height:600px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="300" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained_files/ads(1).html" data-google-container-id="a!3" data-google-query-id="CNOdvMSRhv8CFd9BFQgd3boGTg" data-load-complete="true"></iframe></div></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper" style="height: auto !important; min-height: 0px !important;">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins class="adsbygoogle" style="display: block; height: 600px;" data-ad-client="ca-pub-9482786369113753" data-ad-slot="5720086888" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done" data-ad-status="filled"><div id="aswift_3_host" style="border: none; height: 600px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_3" name="aswift_3" style="left:0;position:absolute;top:0;border:0;width:300px;height:600px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="300" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained_files/ads(2).html" data-google-container-id="a!4" data-google-query-id="CKWHvMSRhv8CFT9fFQgdUUYNoA" data-load-complete="true"></iframe></div></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper" style="height: auto !important; min-height: 0px !important;">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins class="adsbygoogle" style="display: block; height: 600px;" data-ad-client="ca-pub-9482786369113753" data-ad-slot="5720086888" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done" data-ad-status="filled"><div id="aswift_4_host" style="border: none; height: 600px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_4" name="aswift_4" style="left:0;position:absolute;top:0;border:0;width:300px;height:600px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="300" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained_files/ads(3).html" data-google-container-id="a!5" data-google-query-id="COjTysqRhv8CFWNbFQgd20QKbQ" data-load-complete="true"></iframe></div></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                            </div>
+                        
+                    </div>
+                    <hr>
+                    
+                        <div class="post-full-author-header" data-test-label="author-header-with-bio">
+                            
+                                
+    
+    
+    
+
+    <section class="author-card" data-test-label="author-card">
+        
+            
+    <img srcset="https://www.freecodecamp.org/news/content/images/size/w60/2023/03/0I7A2527-copy-2.jpeg 60w" sizes="60px" src="./How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained_files/0I7A2527-copy-2.jpeg" class="author-profile-image" alt="Mikael Lassa" width="2000" height="2478" onerror="this.style.display=&#39;none&#39;" loading="lazy" data-test-label="profile-image">
+  
+        
+
+        <section class="author-card-content ">
+            <span class="author-card-name">
+                <a href="https://www.freecodecamp.org/news/author/mikael/" data-test-label="profile-link" dideo-checked="true">
+                    
+                        Mikael Lassa
+                    
+                </a>
+            </span>
+            
+                
+                    <p data-test-label="default-bio">
+                        Read <a href="https://www.freecodecamp.org/news/author/mikael/" dideo-checked="true">more posts</a>.
+                    </p>
+                
+            
+        </section>
+    </section>
+
+                            
+                        </div>
+                        <hr>
+                    
+
+                    
+                    
+                        
+    
+
+
+<p data-test-label="social-row-cta" class="social-row">
+    If this article was helpful, <button id="tweet-btn" class="cta-button" data-test-label="tweet-button" onclick="window.open(
+    &#39;https://twitter.com/intent/tweet?text=How%20Number%20Systems%20Work%20in%20Java%20%E2%80%93%20Decimal%2C%20Binary%2C%20Octal%2C%20and%20Hexadecimal%20Explained%0A%0Ahttps://www.freecodecamp.org/news/number-systems-in-java/&#39;,
+    &#39;share-twitter&#39;,
+    &#39;width=550, height=235&#39;
+  ); return false;">tweet it</button>.
+</p>
+
+
+    
+    <script>document.addEventListener("DOMContentLoaded",(()=>{const t=document.getElementById("tweet-btn"),e=window.location,n="How%20Number%20Systems%20Work%20in%20Java%20%E2%80%93%20Decimal%2C%20Binary%2C%20Octal%2C%20and%20Hexadecimal%20Explained".replace(/&#39;/g,"%27"),o="",i="",r=Boolean("");let a;if(r&&(o||i)){const t={originalPostAuthor:"",currentPostAuthor:"Mikael Lassa"};a=encodeURIComponent(`Thank you ${o||t.originalPostAuthor} for writing this helpful article, and ${i||t.currentPostAuthor} for translating it.`)}else!r&&i&&(a=encodeURIComponent(`Thank you ${i} for writing this helpful article.`));const l=`window.open(\n    '${a?`https://twitter.com/intent/tweet?text=${a}%0A%0A${n}%0A%0A${e}`:`https://twitter.com/intent/tweet?text=${n}%0A%0A${e}`}',\n    'share-twitter',\n    'width=550, height=235'\n  ); return false;`;t.setAttribute("onclick",l)}));</script>
+
+
+                        
+
+<div class="learn-cta-row" data-test-label="learn-cta-row">
+    <p>
+        Learn to code for free. freeCodeCamp's open source curriculum has helped more than 40,000 people get jobs as developers. <a href="https://www.freecodecamp.org/learn/" class="cta-button" id="learn-to-code-cta" rel="noopener noreferrer" target="_blank" dideo-checked="true">Get started</a>
+    </p>
+</div>
+
+                    
+                </section>
+                
+                    <div class="banner-ad bottom" style="height: auto !important;">
+                        <div class="ad-wrapper" data-test-label="ad-wrapper" style="height: auto !important; min-height: 0px !important;">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins class="adsbygoogle" style="display: block; height: 280px;" data-ad-client="ca-pub-9482786369113753" data-ad-slot="5720086888" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done" data-ad-status="filled"><div id="aswift_5_host" style="border: none; height: 280px; width: 1060px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_5" name="aswift_5" style="left:0;position:absolute;top:0;border:0;width:1060px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="1060" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained_files/ads(4).html" data-google-container-id="a!6" data-google-query-id="CMmVn8uRhv8CFeBZFQgdC_8Jyg" data-load-complete="true"></iframe></div></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                    </div>
+                
+            </article>
+        </div>
+    </main>
+
+
+            
+
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-top">
+            <div class="footer-desc-col">
+                <p data-test-label="tax-exempt-status">freeCodeCamp is a donor-supported tax-exempt 501(c)(3) charity organization (United States Federal Tax Identification Number: 82-0779546)</p>
+                <p data-test-label="mission-statement">Our mission: to help people learn to code for free. We accomplish this by creating thousands of videos, articles, and interactive coding lessons - all freely available to the public. We also have thousands of freeCodeCamp study groups around the world.</p>
+                <p data-test-label="donation-initiatives">Donations to freeCodeCamp go toward our education initiatives, and help pay for servers, services, and staff.</p>
+                <p class="footer-donation" data-test-label="donate-text">
+                    You can <a href="https://www.freecodecamp.org/donate/" class="inline" rel="noopener noreferrer" target="_blank" dideo-checked="true">make a tax-deductible donation here</a>.
+                </p>
+            </div>
+            <div class="trending-guides" data-test-label="trending-guides">
+                <div class="col-header">Trending Guides</div>
+                <div class="trending-guides-row">
+                    <div class="footer-col footer-col-1">
+                        <a href="https://www.freecodecamp.org/news/what-is-a-framework-software-frameworks-definition/" rel="noopener noreferrer" target="_blank" dideo-checked="true">What is a Framework?
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/what-is-a-computer-scientist-what-exactly-do-cs-majors-do/" rel="noopener noreferrer" target="_blank" dideo-checked="true">What Do CS Majors Do?
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/discord-update-failed-how-to-fix-the-error-on-a-windows-10-pc/" rel="noopener noreferrer" target="_blank" dideo-checked="true">Discord Update Failed
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/how-to-center-an-image-in-a-div-css/" rel="noopener noreferrer" target="_blank" dideo-checked="true">Center an Image in CSS
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/what-does-mvc-mean-in-computer-science/" rel="noopener noreferrer" target="_blank" dideo-checked="true">What is the MVC Model?
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/javascript-replaceall-replace-all-instances-of-a-string-in-js/" rel="noopener noreferrer" target="_blank" dideo-checked="true">JavaScript replaceAll()
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/python-switch-statement-switch-case-example/" rel="noopener noreferrer" target="_blank" dideo-checked="true">Python Switch Statement
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/python-string-replace-how-to-replace-a-character-in-a-string/" rel="noopener noreferrer" target="_blank" dideo-checked="true">Python string.replace()
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/what-is-a-relational-database-rdbms-definition/" rel="noopener noreferrer" target="_blank" dideo-checked="true">What is a Relational DB?
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/how-to-split-a-string-in-python/" rel="noopener noreferrer" target="_blank" dideo-checked="true">Split a String in Python
+                        </a>
+                    </div>
+                    <div class="footer-col footer-col-2">
+                        <a href="https://www.freecodecamp.org/news/sql-having-how-to-group-and-count-with-a-having-statement/" rel="noopener noreferrer" target="_blank" dideo-checked="true">SQL HAVING
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/what-is-object-oriented-programming/" rel="noopener noreferrer" target="_blank" dideo-checked="true">What is OOP?
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/html-textarea-how-to-add-text-box-to-your-website/" rel="noopener noreferrer" target="_blank" dideo-checked="true">HTML textarea
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/nvm-for-windows-how-to-download-and-install-node-version-manager-in-windows-10/" rel="noopener noreferrer" target="_blank" dideo-checked="true">NVM for Windows
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/git-revert-file-reverting-a-file-to-a-previous-commit/" rel="noopener noreferrer" target="_blank" dideo-checked="true">Git Revert File
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/sql-aggregate-functions-how-to-group-by-in-mysql-and-postgresql/" rel="noopener noreferrer" target="_blank" dideo-checked="true">GROUP BY in SQL
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/2d-array-in-java-two-dimensional-and-nested-arrays/" rel="noopener noreferrer" target="_blank" dideo-checked="true">2D Array in Java
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/" rel="noopener noreferrer" target="_blank" dideo-checked="true">How to Install NVM
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/how-to-calculate-percentage-in-excel-formula-for-percentages/" rel="noopener noreferrer" target="_blank" dideo-checked="true">Percentages in Excel
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/javascript-timestamp-how-to-use-gettime-to-generate-timestamps-in-js/" rel="noopener noreferrer" target="_blank" dideo-checked="true">JavaScript Timestamp
+                        </a>
+                    </div>
+                    <div class="footer-col footer-col-3">
+                        <div class="footer-left">
+                            <a href="https://www.freecodecamp.org/news/git-list-remote-branches/" rel="noopener noreferrer" target="_blank" dideo-checked="true">Git List Remote Branches
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/git-delete-remote-branch/" rel="noopener noreferrer" target="_blank" dideo-checked="true">Git Delete Remote Branch
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/what-does-a-software-developer-do-software-engineer-career-overview/" rel="noopener noreferrer" target="_blank" dideo-checked="true">Software Developer Career
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/three-dots-operator-in-javascript/" rel="noopener noreferrer" target="_blank" dideo-checked="true">Three Dots Operator in JS
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/javascript-date-format-how-to-format-a-date-in-js/" rel="noopener noreferrer" target="_blank" dideo-checked="true">How to Format Dates in JS
+                            </a>
+                        </div>
+
+                        <div class="footer-right">
+                            <a href="https://www.freecodecamp.org/news/how-to-remove-an-element-from-a-javascript-array-removing-a-specific-item-in-js/" rel="noopener noreferrer" target="_blank" dideo-checked="true">Remove Item from Array JS
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/how-to-dual-boot-windows-10-and-ubuntu-linux-dual-booting-tutorial/" rel="noopener noreferrer" target="_blank" dideo-checked="true">Dual Boot Windows + Ubuntu
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/how-to-round-to-2-decimal-places-in-python/" rel="noopener noreferrer" target="_blank" dideo-checked="true">Python Round to 2 Decimals
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/string-to-number-in-javascript-convert-a-string-to-an-int-in-js/" rel="noopener noreferrer" target="_blank" dideo-checked="true">String to Int in JavaScript
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/gitignore-file-how-to-ignore-files-and-folders-in-git/" rel="noopener noreferrer" target="_blank" dideo-checked="true">What’s the .gitignore File?
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="col-header" data-test-label="our-nonprofit">Our Charity</div>
+            <div class="footer-divider"></div>
+            <div class="our-nonprofit">
+                <a href="https://www.freecodecamp.org/news/about/" rel="noopener noreferrer" target="_blank" data-test-label="about" dideo-checked="true">
+                    About
+                </a>
+                <a href="https://www.linkedin.com/school/free-code-camp/people/" rel="noopener noreferrer" target="_blank" data-test-label="alumni" dideo-checked="true">
+                    Alumni Network
+                </a>
+                <a href="https://github.com/freeCodeCamp/" rel="noopener noreferrer" target="_blank" data-test-label="open-source" dideo-checked="true">
+                    Open Source
+                </a>
+                <a href="https://www.freecodecamp.org/news/shop/" rel="noopener noreferrer" target="_blank" data-test-label="shop" dideo-checked="true">
+                    Shop
+                </a>
+                <a href="https://www.freecodecamp.org/news/support/" rel="noopener noreferrer" target="_blank" data-test-label="support" dideo-checked="true">
+                    Support
+                </a>
+                <a href="https://www.freecodecamp.org/news/sponsors/" rel="noopener noreferrer" target="_blank" data-test-label="sponsors" dideo-checked="true">
+                    Sponsors
+                </a>
+                <a href="https://www.freecodecamp.org/news/academic-honesty-policy/" rel="noopener noreferrer" target="_blank" data-test-label="honesty" dideo-checked="true">
+                    Academic Honesty
+                </a>
+                <a href="https://www.freecodecamp.org/news/code-of-conduct/" rel="noopener noreferrer" target="_blank" data-test-label="coc" dideo-checked="true">
+                    Code of Conduct
+                </a>
+                <a href="https://www.freecodecamp.org/news/privacy-policy/" rel="noopener noreferrer" target="_blank" data-test-label="privacy" dideo-checked="true">
+                    Privacy Policy
+                </a>
+                <a href="https://www.freecodecamp.org/news/terms-of-service/" rel="noopener noreferrer" target="_blank" data-test-label="tos" dideo-checked="true">
+                    Terms of Service
+                </a>
+                <a href="https://www.freecodecamp.org/news/copyright-policy/" rel="noopener noreferrer" target="_blank" data-test-label="copyright" dideo-checked="true">
+                    Copyright Policy
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        </div>
+
+        
+        
+        
+
+        <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5D6RKKP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+        
+    <script defer="" src="./How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained_files/v52afc6f149f6479b8c77fa569edb01181681764108816" integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw==" data-cf-beacon="{&quot;rayId&quot;:&quot;7cabeb447b4718d8&quot;,&quot;token&quot;:&quot;bdb993c6dde44e178aabd9555e75e4f4&quot;,&quot;version&quot;:&quot;2023.4.0&quot;,&quot;si&quot;:100}" crossorigin="anonymous"></script>
+
+
+<ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"><div id="aswift_0_host" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained_files/ads(5).html" data-google-container-id="a!1" data-load-complete="true"></iframe></div></ins><iframe src="./How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained_files/widget.html" style="overflow: hidden; position: fixed; height: 155px; width: 400px; bottom: 20px; right: 20px; background: none; border: none; z-index: 2147483646; visibility: hidden; user-select: none;"></iframe><iframe src="./How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained_files/aframe.html" width="0" height="0" style="display: none;"></iframe></body><iframe id="google_esf" name="google_esf" src="./How Number Systems Work in Java – Decimal, Binary, Octal, and Hexadecimal Explained_files/zrt_lookup.html" style="display: none;"></iframe><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+  div.grammarly-desktop-integration {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select:none;
+    user-select:none;
+  }
+
+  div.grammarly-desktop-integration:before {
+    content: attr(data-content);
+  }
+</style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>

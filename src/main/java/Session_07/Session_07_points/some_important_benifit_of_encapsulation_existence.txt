@@ -1,0 +1,8 @@
+Some Benefit of Encapsulation existence:
+
+1- prevent invalid state (invalid object field value)
+2- provide synchronized access
+3- read only (it can be achived by removing setter methods)
+4- side effect
+5- Lazy Fetch
+...

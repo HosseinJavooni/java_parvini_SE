@@ -1,0 +1,19 @@
+session_08
+----------
+subjects:
+1- constructors
+2- Initialization blocks
+3- Packages in java
+
+Points:
+1.constructor definition:
+constructor is a block code with the same name by its class that is not a method
+ because it has no return type! who run after object creations.
+2.A final variable gets a value once and never changes. so the final variable can get a value
+      in the constructor or initialization block but not in methods because methods can be called
+      more than one time in the execution process.
+3.Initialization blocks run before constructors!
+4.We have three syntax of 'this' in java:
+    this   --> this.i = i
+    this()  --> constructor overloading
+    ClassName.this -->
