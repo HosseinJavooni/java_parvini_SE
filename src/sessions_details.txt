@@ -34,3 +34,4 @@ points
     static methods
     static code block
 2- we can't override static methods in java because they are early binding ,so they refer to specific implementation always
+3- Utility Class: a class that all methods are static.
