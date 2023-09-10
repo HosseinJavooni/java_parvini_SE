@@ -35,4 +35,13 @@ points
     static code block
 2- we can't override static methods in java because they are early binding ,so they refer to specific implementation always
 3- Utility Class: a class that all methods are static.
-(Time Here: session 09 --> 01:55:00)
+===================================================================
+session_10
+----------
+Polymorphism:
+Type1 : ad-hoc Polymorphism  (Method overloading)
+Type2 : sub-typing polymorphism (Inclusion polymorphism)
+Type3 : parametric polymorphism (Unuversal polymorphism)
+Type4 : coercion polymorphism (implicit upcast)
+
+I have seen session 10 up to time: 00:20:31
