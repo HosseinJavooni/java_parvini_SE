@@ -41,7 +41,7 @@ public class DateInPersianCalendarAndJava {
      * @param month is zero based. (e.g. Farvardin = 0, Ordibehesht = 1, etc.)
      */
     public static Date fromPersianDateToDate(int year, int month, int day, int hour, int minutes, int seconds) {
-        return new Date(fromPersianDate(year, month, day, hour, minutes, seconds));
+        return new Date(fromPersianDate(year, month - 1, day, hour, minutes, seconds));
     }
     /**
      * @param month is zero based. (e.g. Farvardin = 0, Ordibehesht = 1, etc.)

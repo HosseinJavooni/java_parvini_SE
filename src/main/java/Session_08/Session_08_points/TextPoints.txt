@@ -17,3 +17,4 @@ constructor is a block code with the same name by its class that is not a method
     this   --> this.i = i
     this()  --> constructor overloading
     ClassName.this -->
+4. When we use * to import a package, it has an effect (make it slower) in compile time (build time), but it has no effect at runtime!
