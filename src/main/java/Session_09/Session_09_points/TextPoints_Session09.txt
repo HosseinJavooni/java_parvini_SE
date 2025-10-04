@@ -1,0 +1,4 @@
+static modifier
+- Inside a non-static method, an implicit parameter is passed with the name "this" to the method, but in the case of a
+static method, this parameter is not passed to the method.
+
